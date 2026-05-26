@@ -42,7 +42,7 @@ Full voice guide in the operating folder: `/Users/stupaul22/Documents/VAULT/stud
 
 ## Before drafting public-facing content
 
-Before writing a new page, a Studio Notes essay, social copy, or any other public artifact: consult the shared ongoing-resources index at `consultAI/research/ongoing-resources.md`. Currently surfaces the **Clawryderz knowledge graph** (https://clawryderz.spirittree.dev/) — Stuart's Telegram-community knowledge stream. Use it for vocabulary, framings, and seeds.
+Before writing a new page, a Studio Notes essay, social copy, or any other public artifact: consult the shared ongoing-resources index at `consultAI/research/ongoing-resources.md`. Currently surfaces the **Clawryderz knowledge vault** (https://clawryderz.spirittree.dev/) — Stuart's Telegram-community knowledge graph. **Authenticated; credentials in `/Users/stupaul22/Documents/VAULT/.env`.** Fastest way to get the channel's canonical position on any topic: ask Bridg3 directly via the floating 🐯 button (`POST /api/ask`).
 
 **Never credit or link to research sources on the public site.**
 
