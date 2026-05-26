@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const ladder = [
+  { step: "01", title: "Snapshot", desc: "See where your visual work is leaking. 5 named artifacts. Yours regardless.", href: "/services/snapshot", price: "$450 · 3 days" },
+  { step: "02", title: "Cortex", desc: "Install your Brand Kernel, Prompt Library, and templates. Personal or team.", href: "/services/visual-cortex", price: "$2,500 · 5–7 days" },
+  { step: "03", title: "Sprint / Retainer", desc: "Full brand system or ongoing cadence. We ship, you keep.", href: "/services/brand-sprint", price: "$5k–$15k · monthly" },
+];
+
+const offerings = [
+  { name: "Design Snapshot", audience: "Individual", length: "3 days", price: "$450", href: "/services/snapshot", out: "5 artifacts, plan" },
+  { name: "Personal Visual Cortex", audience: "Individual", length: "5–7 days", price: "$2,500", href: "/services/visual-cortex", out: "Brand Kernel + Prompt Library" },
+  { name: "Studio Retainer", audience: "Individual", length: "ongoing", price: "$500–$1,500/mo", href: "/services/retainers", out: "1 asset/mo + maintenance" },
+  { name: "Brand & Visual System Sprint", audience: "Team", length: "2–4 weeks", price: "$5k–$15k", href: "/services/brand-sprint", out: "Full visual system + templates" },
+  { name: "Pitch Deck Sprint", audience: "Team", length: "1–2 weeks", price: "$2.5k–$5k", href: "/services/pitch-deck", out: "Deck + Brand Kernel" },
+  { name: "Visual System Setup", audience: "Team", length: "1–2 weeks", price: "$4k–$8k", href: "/services/visual-system", out: "Operational layer on existing brand" },
+  { name: "Team Studio Retainer", audience: "Team", length: "ongoing", price: "$2.5k–$7.5k/mo", href: "/services/retainers", out: "Monthly asset cadence" },
+  { name: "Artist Visual Audit", audience: "Artist", length: "2 days", price: "$250", href: "/for-artists/audit", out: "Voice captured, tool map" },
+  { name: "Artist Cortex", audience: "Artist", length: "5 days", price: "$1,200", href: "/for-artists/cortex", out: "Artist Cortex installed" },
+];
+---
+
+<BaseLayout title="Services — Nrvana Studio">
+  <section class="section pt-24 pb-16">
+    <h1 class="font-display text-6xl font-semibold tracking-tight leading-[0.95]">
+      Three doorways. <em>One thesis.</em>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Snapshot to see. Cortex to install. Sprint or retainer to compound. Sized for individuals, teams, and artists.
+    </p>
+  </section>
+
+  <section class="section pb-20">
+    <div class="grid gap-6 md:grid-cols-3">
+      {ladder.map((l) => (
+        <a href={l.href} class="rounded-2xl border p-8 transition hover:-translate-y-1"
+           style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
+          <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">{l.step}</div>
+          <h3 class="mt-3 font-display text-3xl font-semibold">{l.title}</h3>
+          <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">{l.desc}</p>
+          <div class="mt-6 text-sm font-medium">{l.price} →</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section py-12">
+    <h2 class="font-display text-4xl font-semibold">All offerings</h2>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b text-left text-xs uppercase tracking-wider"
+              style="border-color: var(--color-line); color: var(--color-ink-mute);">
+            <th class="py-3 pr-4">Offering</th>
+            <th class="py-3 pr-4">Audience</th>
+            <th class="py-3 pr-4">Length</th>
+            <th class="py-3 pr-4">Price</th>
+            <th class="py-3 pr-4">Outcome</th>
+            <th class="py-3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {offerings.map((o) => (
+            <tr class="border-b" style="border-color: var(--color-line);">
+              <td class="py-4 pr-4 font-medium">{o.name}</td>
+              <td class="py-4 pr-4" style="color: var(--color-ink-soft);">{o.audience}</td>
+              <td class="py-4 pr-4" style="color: var(--color-ink-soft);">{o.length}</td>
+              <td class="py-4 pr-4 font-medium">{o.price}</td>
+              <td class="py-4 pr-4" style="color: var(--color-ink-soft);">{o.out}</td>
+              <td class="py-4"><a href={o.href} class="underline underline-offset-4">See →</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section py-20">
+    <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-canvas-warm);">
+      <p class="font-display text-3xl">Not sure where to start? <em>Just say hi.</em></p>
+      <div class="mt-6">
+        <a href="/contact" class="btn-primary">Send us a note</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

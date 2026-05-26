@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const deliverables = [
+  { name: "Your Voice File", desc: "A portable description of your style, deliberately not 'tuned for AI to imitate.' Travels with you into any future tool." },
+  { name: "Your Reference Library", desc: "Your own work, indexed and tagged, available to load into any tool that supports references (Midjourney --cref, Recraft styles, Krea boards)." },
+  { name: "Two Practice Workflows installed", desc: "Concept exploration, client mockups, color test loops — concrete uses that save time without compromising the hand-made work." },
+  { name: "Glaze + Nightshade routine", desc: "Where applicable. We help you set up the protection workflow that fits your output cadence." },
+  { name: "Your Compounding Routine", desc: "A weekly 15-minute habit that keeps the system aligned with how your style is evolving." },
+];
+---
+
+<BaseLayout title="Artist Cortex — $1,200 · Nrvana Studio">
+  <section class="section pt-24 pb-12">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">For artists</div>
+    <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight leading-[0.95] max-w-4xl">
+      Your voice, installed. <em>Your hands, still on the work.</em>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Five days. Five named artifacts. Sized-right pricing because we mean it.
+    </p>
+  </section>
+
+  <section class="section py-8">
+    <div class="grid gap-4 rounded-2xl border p-8 sm:grid-cols-4"
+         style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Length</div><div class="mt-1 font-display text-2xl font-semibold">5 days</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Deliverables</div><div class="mt-1 font-display text-2xl font-semibold">5 named</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Format</div><div class="mt-1 font-display text-2xl font-semibold">Mostly async</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div><div class="mt-1 font-display text-2xl font-semibold" style="color: var(--color-accent-deep);">$1,200 flat</div></div>
+    </div>
+  </section>
+
+  <section class="section py-12">
+    <h2 class="font-display text-4xl font-semibold">What you walk away with</h2>
+    <ol class="mt-10 space-y-7">
+      {deliverables.map((d, i) => (
+        <li class="flex gap-6">
+          <div class="font-display text-3xl font-semibold" style="color: var(--color-accent); min-width: 2.5rem;">
+            {String(i + 1).padStart(2, "0")}
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-medium">{d.name}</h3>
+            <p class="mt-2" style="color: var(--color-ink-soft);">{d.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="section py-20">
+    <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
+      <h2 class="font-display text-4xl font-semibold">Start your Artist Cortex.</h2>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/contact?ref=artist-cortex" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-accent); color: var(--color-canvas);">Book — $1,200</a>
+        <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+           style="color: var(--color-canvas-soft);">Talk first</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

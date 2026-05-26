@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact — Nrvana Studio">
+  <section class="section pt-24 pb-12">
+    <h1 class="font-display text-6xl font-semibold tracking-tight leading-[0.95]">
+      Two doorways. <em>Pick whichever feels right.</em>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Email us directly, or send a note. We answer every message ourselves.
+    </p>
+  </section>
+
+  <section class="section py-12">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="rounded-2xl border p-8" style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
+        <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">High commit</div>
+        <h2 class="mt-3 font-display text-3xl font-semibold">Book a Snapshot or Audit</h2>
+        <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">
+          $450 Design Snapshot · $250 Artist Audit · $2,500 Visual Cortex. Booking link goes live as soon as Stripe + Calendly are wired.
+        </p>
+        <a href="mailto:hi@nrvana.com?subject=Studio%20booking" class="btn-accent mt-6">
+          Email to book — hi@nrvana.com
+        </a>
+      </div>
+
+      <div class="rounded-2xl border p-8" style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
+        <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-alt);">Just say hi</div>
+        <h2 class="mt-3 font-display text-3xl font-semibold">Send a note</h2>
+        <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">
+          A question, a hello, a "not sure if you can help with X." No qualifying questions, no funnel.
+        </p>
+        <a href="mailto:hi@nrvana.com" class="btn-primary mt-6">
+          hi@nrvana.com
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

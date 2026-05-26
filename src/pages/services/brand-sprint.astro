@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const includes = [
+  "Logo + wordmark (3 directions explored, 1 finalized, all formats)",
+  "Color system with use rules",
+  "Typography system with use rules",
+  "Photographic / illustration direction with sample assets",
+  "Brand Kernel (machine-readable, AI-tool-ready)",
+  "Templates — pitch deck, sales deck, social hero, social carousel, LinkedIn header, email signature, blog cover",
+  "Prompt Library tuned to the brand for ongoing content production",
+  "Internal team runbook — how non-designers self-serve without producing brand violations",
+];
+---
+
+<BaseLayout title="Brand & Visual System Sprint — Nrvana Studio">
+  <section class="section pt-24 pb-12">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-alt);">For your team · 2–50 people</div>
+    <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight leading-[0.95] max-w-4xl">
+      A full brand, AI-augmented. <em>Built in weeks, not quarters.</em>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Logo, color, type, templates, kernel, and the runbook your team uses to keep it consistent. End-to-end.
+    </p>
+  </section>
+
+  <section class="section py-8">
+    <div class="grid gap-4 rounded-2xl border p-8 sm:grid-cols-3"
+         style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Length</div><div class="mt-1 font-display text-2xl font-semibold">2–4 weeks</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Outcome</div><div class="mt-1 font-display text-2xl font-semibold">Full system + templates</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div><div class="mt-1 font-display text-2xl font-semibold" style="color: var(--color-accent-deep);">$5k–$15k</div></div>
+    </div>
+  </section>
+
+  <section class="section py-12">
+    <h2 class="font-display text-4xl font-semibold">What ships</h2>
+    <ul class="mt-8 space-y-3" style="color: var(--color-ink-soft);">
+      {includes.map((i) => <li>· {i}</li>)}
+    </ul>
+  </section>
+
+  <section class="section py-20">
+    <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
+      <h2 class="font-display text-4xl font-semibold">Start a Brand Sprint.</h2>
+      <div class="mt-8">
+        <a href="/contact?ref=brand-sprint" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-accent); color: var(--color-canvas);">Talk through a Sprint →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

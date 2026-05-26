@@ -1,0 +1,29 @@
+---
+const links = [
+  { href: "/services", label: "Services" },
+  { href: "/for-artists", label: "For Artists" },
+  { href: "/method", label: "Method" },
+  { href: "/studio-notes", label: "Studio Notes" },
+  { href: "/about", label: "About" },
+];
+---
+
+<header class="border-b" style="border-color: var(--color-line);">
+  <div class="section flex items-center justify-between py-5">
+    <a href="/" class="font-display text-xl font-semibold tracking-tight">
+      Nrvana<span style="color: var(--color-accent);"> · </span><span style="font-weight: 500;">Studio</span>
+    </a>
+    <nav class="flex items-center gap-7 text-sm" style="color: var(--color-ink-soft);">
+      {links.map((l) => (
+        <a href={l.href} class="hover:text-[var(--color-ink)] transition">{l.label}</a>
+      ))}
+      <a
+        href="/services/snapshot"
+        class="ml-3 inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium"
+        style="background-color: var(--color-accent); color: var(--color-canvas);"
+      >
+        Book the Snapshot →
+      </a>
+    </nav>
+  </div>
+</header>

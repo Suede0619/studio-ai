@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const deliverables = [
+  { name: "Your Brand Kernel", desc: "A markdown + image file describing your visual identity: colors with hex + use rules, type with rationale, voice descriptors, three reference images you love, three you reject. Any AI tool can load it." },
+  { name: "Your Prompt Library", desc: "50–80 prompts organized by use — deck slide, social hero, LinkedIn header, blog cover, profile photo, podcast art — each tuned to your kernel." },
+  { name: "Your Tool Loadout", desc: "The 4–6 AI design tools we recommend you actually use, with billing reasoned through and your kernel loaded in each where possible." },
+  { name: "Two installed templates", desc: "A deck template and a social template, both wired so non-designers (or future-you) can produce on-brand work in 10 minutes." },
+  { name: "Your Compounding Routine", desc: "A 15-minute weekly ritual that keeps the kernel current as your taste evolves. We teach it. You own it." },
+];
+---
+
+<BaseLayout title="Personal Visual Cortex — $2,500 · Nrvana Studio">
+  <section class="section pt-24 pb-12">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">For you · Individual</div>
+    <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight leading-[0.95] max-w-4xl">
+      Your brand shouldn't live in a PDF. <em>It should live where the work gets made.</em>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      We build the working visual brain — Brand Kernel, Prompt Library, Tool Loadout, templates — that AI tools read so they produce on-brand work, in your voice. Then we hand it to you.
+    </p>
+  </section>
+
+  <section class="section py-8">
+    <div class="grid gap-4 rounded-2xl border p-8 sm:grid-cols-4"
+         style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Length</div><div class="mt-1 font-display text-2xl font-semibold">5–7 days</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Deliverables</div><div class="mt-1 font-display text-2xl font-semibold">5 named</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Format</div><div class="mt-1 font-display text-2xl font-semibold">Mostly async</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div><div class="mt-1 font-display text-2xl font-semibold" style="color: var(--color-accent-deep);">$2,500 flat</div></div>
+    </div>
+  </section>
+
+  <section class="section py-12">
+    <h2 class="font-display text-4xl font-semibold">What you walk away with</h2>
+    <ol class="mt-10 space-y-7">
+      {deliverables.map((d, i) => (
+        <li class="flex gap-6">
+          <div class="font-display text-3xl font-semibold" style="color: var(--color-accent); min-width: 2.5rem;">
+            {String(i + 1).padStart(2, "0")}
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-medium">{d.name}</h3>
+            <p class="mt-2" style="color: var(--color-ink-soft);">{d.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="section py-12">
+    <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-warm);">
+      <p class="font-display text-3xl">
+        Portable. <em>Yours regardless.</em>
+      </p>
+      <p class="mt-3" style="color: var(--color-ink-soft);">
+        Your Brand Kernel and Prompt Library work with any AI tool you choose. Fire us and take them anywhere.
+      </p>
+    </div>
+  </section>
+
+  <section class="section py-20">
+    <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
+      <h2 class="font-display text-4xl font-semibold">Start your Visual Cortex.</h2>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/contact?ref=visual-cortex" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-accent); color: var(--color-canvas);">Book — $2,500</a>
+        <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+           style="color: var(--color-canvas-soft);">Talk first</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

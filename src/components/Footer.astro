@@ -1,0 +1,41 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-32 border-t" style="border-color: var(--color-line);">
+  <div class="section py-12">
+    <div class="grid gap-8 md:grid-cols-3">
+      <div>
+        <div class="font-display text-lg font-semibold">
+          Nrvana<span style="color: var(--color-accent);"> · </span><span style="font-weight: 500;">Studio</span>
+        </div>
+        <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">
+          AI-augmented design that amplifies humans. We don't replace them — especially not the artists.
+        </p>
+      </div>
+      <div class="text-sm" style="color: var(--color-ink-soft);">
+        <div class="font-medium text-[var(--color-ink)]">Start here</div>
+        <ul class="mt-3 space-y-2">
+          <li><a href="/services/snapshot" class="hover:text-[var(--color-ink)]">Design Snapshot — $450</a></li>
+          <li><a href="/services/visual-cortex" class="hover:text-[var(--color-ink)]">Personal Visual Cortex — $2,500</a></li>
+          <li><a href="/for-artists" class="hover:text-[var(--color-ink)]">For Artists — from $250</a></li>
+          <li><a href="/contact" class="hover:text-[var(--color-ink)]">Just say hi</a></li>
+        </ul>
+      </div>
+      <div class="text-sm" style="color: var(--color-ink-soft);">
+        <div class="font-medium text-[var(--color-ink)]">Also from Nrvana</div>
+        <ul class="mt-3 space-y-2">
+          <li><a href="https://ai.nrvana.com" class="hover:text-[var(--color-ink)]">AI Consulting — ai.nrvana.com</a></li>
+          <li><a href="/studio-notes" class="hover:text-[var(--color-ink)]">Studio Notes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 flex items-center justify-between text-xs" style="color: var(--color-ink-mute);">
+      <div>© {year} Nrvana</div>
+      <div class="flex gap-5">
+        <a href="/legal/privacy" class="hover:text-[var(--color-ink)]">Privacy</a>
+        <a href="/legal/terms" class="hover:text-[var(--color-ink)]">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
