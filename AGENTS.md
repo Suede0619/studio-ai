@@ -16,7 +16,7 @@ Any copy you write or edit must answer to this. Reject "headcount reduction" / "
 
 - **Framework:** Astro 5 (static-first)
 - **Styling:** Tailwind CSS 4 via `@tailwindcss/vite`
-- **Content:** MDX-ready (Studio Notes essays go in `src/content/`)
+- **Content:** MDX-ready (Plates essays go in `src/content/`)
 - **Deploy:** Vercel, connected to `main`
 
 ## Voice rules (apply when writing copy)
@@ -42,7 +42,7 @@ Full voice guide in the operating folder: `/Users/stupaul22/Documents/VAULT/stud
 
 ## Before drafting public-facing content
 
-Before writing a new page, a Studio Notes essay, social copy, or any other public artifact: consult the shared ongoing-resources index at `consultAI/research/ongoing-resources.md`. Currently surfaces the **Clawryderz knowledge vault** (https://clawryderz.spirittree.dev/) — Stuart's Telegram-community knowledge graph. **Authenticated; credentials in `/Users/stupaul22/Documents/VAULT/.env`.** Fastest way to get the channel's canonical position on any topic: ask Bridg3 directly via the floating 🐯 button (`POST /api/ask`).
+Before writing a new page, a Plates essay, social copy, or any other public artifact: consult the shared ongoing-resources index at `consultAI/research/ongoing-resources.md`. Currently surfaces the **Clawryderz knowledge vault** (https://clawryderz.spirittree.dev/) — Stuart's Telegram-community knowledge graph. **Authenticated; credentials in `/Users/stupaul22/Documents/VAULT/.env`.** Fastest way to get the channel's canonical position on any topic: ask Bridg3 directly via the floating 🐯 button (`POST /api/ask`).
 
 **Never credit or link to research sources on the public site.**
 

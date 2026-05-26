@@ -43,11 +43,11 @@ src/
 │   │   └── retainers.astro      Retainers
 │   ├── for-artists/
 │   │   ├── index.astro          Artist Path overview
-│   │   ├── audit.astro          Artist Visual Audit — $250
+│   │   ├── audit.astro          Artist Style Snapshot — $250
 │   │   └── cortex.astro         Artist Cortex — $1,200
 │   ├── method.astro             (stub — full method page coming)
 │   ├── about.astro              Stuart Paul · Founder
-│   ├── studio-notes/index.astro Essays index (essays coming)
+│   ├── plates/index.astro Essays index (essays coming)
 │   ├── contact.astro            Two doorways
 │   └── legal/                   Privacy + Terms (stubs)
 └── styles/global.css            Tailwind + brand tokens (warm cream + terracotta)

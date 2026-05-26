@@ -3,10 +3,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const offerings = [
   {
-    name: "Artist Visual Audit",
+    name: "Artist Style Snapshot",
     price: "$250 · 2 days",
-    href: "/for-artists/audit",
-    desc: "Your voice captured, your tool map, your Glaze/Nightshade posture, two practice workflows you'd actually use, and a recommendation. Yours regardless.",
+    href: "/for-artists/snapshot",
+    desc: "Your voice captured, your tool map, your Glaze/Nightshade posture, two practice workflows you'd actually use, and a recommendation. Yours to keep.",
   },
   {
     name: "Artist Cortex",
@@ -55,7 +55,7 @@ const wontDo = [
           <h3 class="font-display text-3xl font-semibold">{o.name}</h3>
           <div class="mt-1 text-sm font-medium" style="color: var(--color-accent-deep);">{o.price}</div>
           <p class="mt-4 text-sm" style="color: var(--color-ink-soft);">{o.desc}</p>
-          <div class="mt-6 text-sm underline underline-offset-4">See the audit →</div>
+          <div class="mt-6 text-sm underline underline-offset-4">See the Snapshot →</div>
         </a>
       ))}
     </div>
@@ -70,11 +70,11 @@ const wontDo = [
 
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
-      <h2 class="font-display text-4xl font-semibold">Start with the $250 audit.</h2>
-      <p class="mt-3" style="color: var(--color-canvas-soft);">Two days. Five named artifacts. Yours regardless.</p>
+      <h2 class="font-display text-4xl font-semibold">Start with the $250 Style Snapshot.</h2>
+      <p class="mt-3" style="color: var(--color-canvas-soft);">Two days. Five named artifacts. Yours to keep.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/contact?ref=artist-audit" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
-           style="background-color: var(--color-accent); color: var(--color-canvas);">Book the Audit — $250</a>
+        <a href="/contact?ref=artist-snapshot" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-accent); color: var(--color-canvas);">Book the Snapshot — $250</a>
         <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
            style="color: var(--color-canvas-soft);">Just say hi</a>
       </div>
