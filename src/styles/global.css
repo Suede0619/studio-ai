@@ -66,7 +66,7 @@
     background-color: var(--color-ink);
     color: var(--color-canvas);
     padding: 0.95rem 2rem;
-    border-radius: 0;
+    border-radius: 4px;
     font-size: 0.8125rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -86,7 +86,7 @@
     background-color: var(--color-accent);
     color: #fff;
     padding: 0.95rem 2rem;
-    border-radius: 0;
+    border-radius: 4px;
     font-size: 0.8125rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -149,10 +149,14 @@
   }
 }
 
-/* Editorial sharp corners — neutralize rounded utilities (Leclerc signature). */
+/* Editorial sharp corners on cards/panels (Leclerc signature). */
 .rounded-2xl,
 .rounded-3xl,
-.rounded-xl,
-.rounded-md {
+.rounded-xl {
   border-radius: 0;
+}
+
+/* Inline button utilities — 4px button radius. */
+.rounded-md {
+  border-radius: 4px;
 }
