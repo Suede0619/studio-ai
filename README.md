@@ -50,7 +50,10 @@ src/
 │   ├── plates/index.astro Essays index (essays coming)
 │   ├── contact.astro            Two doorways
 │   └── legal/                   Privacy + Terms (stubs)
-└── styles/global.css            Tailwind + brand tokens (warm cream + terracotta)
+└── styles/global.css            Tailwind + brand tokens — Charles Leclerc design system
+                                  (ivory + noir editorial, Ferrari-red accent, warm-gold
+                                  secondary, EB Garamond display, sharp corners, square
+                                  uppercase buttons)
 ```
 
 ## Brand rules

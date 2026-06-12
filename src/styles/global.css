@@ -1,20 +1,22 @@
 @import "tailwindcss";
 
-/* Nrvana Studio palette — warmer + bolder than Nrvana AI's consulting site. */
+/* Nrvana Studio — Charles Leclerc design system (editorial luxury, light mode).
+   Ivory + Noir, Ferrari-red as deliberate punctuation, warm-gold secondary,
+   EB Garamond display serif, sharp corners, square uppercase buttons. */
 @theme {
-  --color-canvas: #f8f3e8;
-  --color-canvas-soft: #f0e9d8;
-  --color-canvas-warm: #ebe1cc;
-  --color-ink: #1c1612;
-  --color-ink-soft: #443830;
-  --color-ink-mute: #6b5d52;
-  --color-accent: #c45a3d;       /* warm terracotta — the studio's signature */
-  --color-accent-deep: #9a4630;
-  --color-accent-alt: #2d5757;   /* deep teal — secondary accent for variety */
-  --color-line: #d8cdb8;
+  --color-canvas: #f5f0eb;        /* Ivory — never pure white */
+  --color-canvas-soft: #faf8f5;   /* Warm white — cards */
+  --color-canvas-warm: #ece5db;   /* Deeper warm ivory — alternating sections */
+  --color-ink: #0d0d0d;           /* Noir */
+  --color-ink-soft: #4a4a4a;      /* Body copy on light */
+  --color-ink-mute: #888888;      /* Secondary / captions */
+  --color-accent: #c12c2c;        /* Ferrari Red */
+  --color-accent-deep: #a02424;   /* Red, active */
+  --color-accent-alt: #c5a55a;    /* Warm gold — secondary accent */
+  --color-line: #e8e3dd;          /* Warm light border */
 
-  --font-display: "Fraunces", "Iowan Old Style", "Apple Garamond", Georgia, serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "EB Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-body: "Neue Haas Grotesk", "Helvetica Neue", "Inter", Arial, sans-serif;
 }
 
 @layer base {
@@ -27,26 +29,22 @@
   }
 
   body {
-    line-height: 1.55;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.015em;
-    line-height: 1.05;
-    font-feature-settings: "ss01" on, "ss02" on;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    font-weight: 500;
   }
 
-  /* Display sizes lean bigger here than on the consulting site — the studio sells design, the type has to show range. */
-  h1 {
-    font-weight: 600;
-  }
-
+  /* Ferrari red appears only as punctuation — the italic punchline. */
   em {
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 500;
-    font-variation-settings: "opsz" 144;
+    color: var(--color-accent);
   }
 
   a {
@@ -60,53 +58,62 @@
 }
 
 @layer components {
+  /* Primary = Noir block, the Leclerc dark button */
   .btn-primary {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     background-color: var(--color-ink);
     color: var(--color-canvas);
-    padding: 0.875rem 1.5rem;
-    border-radius: 0.5rem;
+    padding: 0.95rem 2rem;
+    border-radius: 0;
+    font-size: 0.8125rem;
     font-weight: 500;
-    transition: background-color 150ms ease, transform 150ms ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background-color 200ms ease, color 200ms ease;
   }
   .btn-primary:hover {
-    background-color: var(--color-accent-deep);
-    transform: translateY(-1px);
+    background-color: var(--color-accent);
+    color: #fff;
   }
 
+  /* Accent = the Ferrari-red CTA */
   .btn-accent {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     background-color: var(--color-accent);
-    color: var(--color-canvas);
-    padding: 0.875rem 1.5rem;
-    border-radius: 0.5rem;
+    color: #fff;
+    padding: 0.95rem 2rem;
+    border-radius: 0;
+    font-size: 0.8125rem;
     font-weight: 500;
-    transition: background-color 150ms ease, transform 150ms ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background-color 200ms ease;
   }
   .btn-accent:hover {
-    background-color: var(--color-accent-deep);
-    transform: translateY(-1px);
+    background-color: #e03333;
   }
 
   .btn-ghost {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.875rem 1.5rem;
-    border-radius: 0.5rem;
+    padding: 0.95rem 0.25rem;
+    font-size: 0.8125rem;
     font-weight: 500;
-    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 5px;
     text-decoration-thickness: 1px;
-    transition: color 150ms ease;
+    transition: color 200ms ease;
   }
   .btn-ghost:hover {
-    color: var(--color-ink);
+    color: var(--color-accent-deep);
   }
 
   .section {
@@ -131,13 +138,21 @@
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    border-radius: 999px;
+    border-radius: 0;
     background-color: var(--color-canvas-warm);
     color: var(--color-ink-soft);
   }
 
   .badge-accent {
     background-color: var(--color-accent);
-    color: var(--color-canvas);
+    color: #fff;
   }
+}
+
+/* Editorial sharp corners — neutralize rounded utilities (Leclerc signature). */
+.rounded-2xl,
+.rounded-3xl,
+.rounded-xl,
+.rounded-md {
+  border-radius: 0;
 }
