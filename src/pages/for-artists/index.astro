@@ -1,26 +1,27 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
 
 const offerings = [
   {
     name: "Artist Style Snapshot",
     price: "$250 · 2 days",
     href: "/for-artists/snapshot",
-    desc: "Your voice captured, your tool map, your Glaze/Nightshade posture, two practice workflows you'd actually use, and a recommendation. Yours to keep.",
+    desc: "Your voice captured, your tool map, your Glaze/Nightshade options, two practical workflows you'd actually use, and a clear recommendation. Yours to keep.",
   },
   {
     name: "Artist Cortex",
     price: "$1,200 · 5 days",
     href: "/for-artists/cortex",
-    desc: "Your Voice File, your reference library, two practice workflows installed, your protection posture, and the weekly ritual that keeps the system aligned with how your style is evolving.",
+    desc: "Your Voice File, your reference library, two practical workflows set up, your protection in place, and a weekly habit that keeps it all in step with how your style is growing.",
   },
 ];
 
-const wontDo = [
-  "We won't imitate someone else's style to undercut them.",
-  "We won't train models on your work without your written consent.",
-  "We won't ship 'AI art' that competes with the artists we serve.",
-  "We won't recommend tools that flatten your voice into a template.",
+const promises = [
+  "Your style stays yours — we amplify it, never copy it.",
+  "Your work trains nothing without your written yes.",
+  "We're on your side: we build tools for artists, not against them.",
+  "Every tool we recommend makes your voice louder, not flatter.",
 ];
 ---
 
@@ -31,17 +32,20 @@ const wontDo = [
       We respect your process. <em>We just want it to be louder.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Working illustrators, designers, photographers, video artists, motion designers, type designers, 3D artists, animators. Two years of "AI will replace illustrators" headlines. We don't buy it.
+      Working illustrators, designers, photographers, video artists, motion designers, type designers,
+      3D artists, animators — this path is built for you, and priced for you.
     </p>
   </section>
 
   <section class="section py-12">
     <div class="max-w-3xl">
       <p style="color: var(--color-ink-soft);">
-        Your voice is the asset. AI is a power tool you steer. We built a sized-right path so you can engage on your terms — keep your hands on the work, keep your signature, and keep getting hired.
+        Your voice is the asset. AI is a power tool you steer. We built a sized-right path so you can
+        engage on your terms — keep your hands on the work, keep your signature, make more, and stay in demand.
       </p>
       <p class="mt-4" style="color: var(--color-ink-soft);">
-        If you're protecting your work with Glaze or Nightshade, we'll help you set those up too. If you're not, we'll show you what your options are. Either way, your call.
+        If you want to protect your work with Glaze or Nightshade, we'll help you set that up. If you'd
+        rather not, we'll walk you through your options. Always your call.
       </p>
     </div>
   </section>
@@ -55,28 +59,28 @@ const wontDo = [
           <h3 class="font-display text-3xl font-semibold">{o.name}</h3>
           <div class="mt-1 text-sm font-medium" style="color: var(--color-accent-deep);">{o.price}</div>
           <p class="mt-4 text-sm" style="color: var(--color-ink-soft);">{o.desc}</p>
-          <div class="mt-6 text-sm underline underline-offset-4">See the Snapshot →</div>
+          <div class="mt-6 text-sm underline underline-offset-4">See it →</div>
         </a>
       ))}
     </div>
   </section>
 
   <section class="section py-12">
-    <h2 class="font-display text-3xl font-semibold">What we won't do.</h2>
+    <h2 class="font-display text-3xl font-semibold">Our promises to you.</h2>
     <ul class="mt-6 space-y-3 text-sm" style="color: var(--color-ink-soft);">
-      {wontDo.map((w) => <li>· {w}</li>)}
+      {promises.map((p) => <li>· {p}</li>)}
     </ul>
   </section>
 
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
       <h2 class="font-display text-4xl font-semibold">Start with the $250 Style Snapshot.</h2>
-      <p class="mt-3" style="color: var(--color-canvas-soft);">Two days. Five named artifacts. Yours to keep.</p>
+      <p class="mt-3" style="color: var(--color-canvas-soft);">Two days. Five clear deliverables. Yours to keep.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/contact?ref=artist-snapshot" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
-           style="background-color: var(--color-accent); color: var(--color-canvas);">Book the Snapshot — $250</a>
-        <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
-           style="color: var(--color-canvas-soft);">Just say hi</a>
+        <a href="/for-artists/snapshot" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-accent); color: var(--color-canvas);">See the Style Snapshot — $250</a>
+        <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+           style="color: var(--color-canvas-soft);">Or book a free chat</a>
       </div>
     </div>
   </section>

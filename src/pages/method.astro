@@ -1,24 +1,50 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../siteConfig";
+
+const steps = [
+  { t: "We capture your look", d: "Your colors, type, voice, and the references you love — written down as a simple brand kit any AI tool can read. The thing most 'AI design' tools skip entirely." },
+  { t: "We set up the tools", d: "Prompts and templates, all tuned to your brand, in the apps you already use — so a polished deck or post takes about ten minutes." },
+  { t: "You make it your own", d: "A quick weekly habit keeps it fresh as your taste grows. We teach it. You own it. It travels with you, always." },
+];
 ---
 
-<BaseLayout title="The Nrvana Studio Method">
+<BaseLayout title="How it works — Nrvana Studio">
   <section class="section pt-24 pb-12">
     <h1 class="font-display text-6xl font-semibold tracking-tight leading-[0.95] max-w-4xl">
-      Three things "AI design" services skip. <em>We start there.</em>
+      The trick to AI that looks like <em>you.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      The Brand Kernel. The Prompt Library. The Visual Cortex. The unsexy layer that turns a generic AI generator into <em>your</em> generator.
+      Generic AI makes generic-looking work. The difference is a simple brand kit it can read from —
+      so everything comes out in your style. We build that, and set it all up for you.
     </p>
   </section>
 
   <section class="section py-12">
-    <p class="text-sm" style="color: var(--color-ink-mute);">
-      Method page — full version landing soon. Coming with it: the kernel diagram, real (sanitized) samples,
-      a worked example of how the three artifacts compound, and the artist-specific variation.
-    </p>
-    <div class="mt-8">
-      <a href="/services/snapshot" class="btn-accent">In the meantime — Book the Snapshot · $450</a>
+    <div class="grid gap-10 md:grid-cols-3">
+      {steps.map((s, i) => (
+        <div>
+          <div class="font-display text-4xl font-semibold" style="color: var(--color-accent);">{String(i + 1).padStart(2, "0")}</div>
+          <h2 class="mt-2 font-display text-2xl font-medium">{s.t}</h2>
+          <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">{s.d}</p>
+        </div>
+      ))}
     </div>
+  </section>
+
+  <section class="section py-12">
+    <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-warm);">
+      <p class="font-display text-2xl">
+        You don't need to be a designer. <em>That's our job.</em>
+      </p>
+      <p class="mt-3" style="color: var(--color-ink-soft);">
+        We handle the craft. You get work that looks sharp, consistent, and unmistakably yours.
+      </p>
+    </div>
+  </section>
+
+  <section class="section py-16">
+    <a href={CALL_HREF} class="btn-accent">Book a free 20-minute call</a>
+    <a href="/services/snapshot" class="btn-ghost ml-2">Or start with the $450 Snapshot →</a>
   </section>
 </BaseLayout>

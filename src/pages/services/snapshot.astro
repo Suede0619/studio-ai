@@ -1,24 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF, SNAPSHOT_HREF } from "../../siteConfig";
 
 const deliverables = [
-  { name: "Your Style Snapshot", desc: "Every brand-touching asset you have today — deck, social, LinkedIn, website, email signature — assessed for what works and what doesn't." },
-  { name: "Your Tool Map", desc: "The AI design tools you pay for, mapped to outcomes. Recommendations for what to drop, what to add, what to actually use." },
-  { name: "Your Top-3 Visual Wins", desc: "The three highest-leverage upgrades, in order, with effort-to-impact ranking." },
-  { name: "Your Starter Prompt Library", desc: "15–25 prompts tuned to your context that work across Midjourney, Recraft, Krea, and the rest of the current stack." },
-  { name: "Your Next Step", desc: "Explicit recommendation: stop here and DIY, or continue with a Visual Cortex." },
+  { name: "Your Look, Reviewed", desc: "We look at everything that carries your brand today — deck, social, website, email signature — and show you what's working and what's holding you back." },
+  { name: "Your Tool Map", desc: "Which AI design tools are worth paying for, which to skip, and the one to start with. A short, honest shortlist — no overwhelm." },
+  { name: "Your Top 3 Quick Wins", desc: "The three upgrades that will make the biggest difference, in order, with the easiest one first." },
+  { name: "Your Starter Prompt Kit", desc: "15–25 ready-to-use prompts tuned to your style, so you can make polished, on-brand pieces from day one." },
+  { name: "Your Next Step", desc: "An honest recommendation — keep going on your own, or have us set up the full thing. Your call, no pressure." },
 ];
 
 const schedule = [
-  { day: "Day 1", title: "Intake call", desc: "45 minutes with us. Plus we send a small kit — drop your current brand assets in a folder, no formatting required." },
-  { day: "Day 2", title: "Synthesis", desc: "We build the snapshot, the tool map, the prompt library, and the recommendation." },
-  { day: "Day 3", title: "Walkthrough", desc: "60-minute walkthrough. You keep every artifact." },
-];
-
-const notFor = [
-  "Anyone shopping for AI to replace their designer. Hard line.",
-  "Anyone wanting a $99 logo. That race is to the bottom.",
-  "Anyone wanting an 'AI strategy deck.' We ship artifacts, not slides.",
+  { day: "Day 1", title: "A friendly chat", desc: "45 minutes with us. We learn your style and what you're trying to pull off. You don't prep a thing." },
+  { day: "Day 2", title: "We do the work", desc: "We review your look, build your tool map, and tune your starter prompts. You carry on with your day." },
+  { day: "Day 3", title: "We walk you through it", desc: "60 minutes together. We hand it all over and make sure you feel confident using it." },
 ];
 ---
 
@@ -26,10 +21,11 @@ const notFor = [
   <section class="section pt-24 pb-12">
     <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">For you · Individual</div>
     <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight leading-[0.95]">
-      See where your visual work is leaking. <em>In 3 days.</em>
+      Make your brand look the part. <em>In 3 days.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Five named artifacts. One acceleration plan. Yours to keep.
+      Five clear deliverables. A simple plan. Your first on-brand AI setup, ready to use. All yours
+      to keep — no design background needed.
     </p>
   </section>
 
@@ -41,15 +37,15 @@ const notFor = [
         <div class="mt-1 font-display text-2xl font-semibold">3 days</div>
       </div>
       <div>
-        <div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Deliverables</div>
-        <div class="mt-1 font-display text-2xl font-semibold">5 named</div>
+        <div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">You get</div>
+        <div class="mt-1 font-display text-2xl font-semibold">5 deliverables</div>
       </div>
       <div>
         <div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Your time</div>
-        <div class="mt-1 font-display text-2xl font-semibold">2–3 hours</div>
+        <div class="mt-1 font-display text-2xl font-semibold">~2 hours</div>
       </div>
       <div>
-        <div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div>
+        <div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Price</div>
         <div class="mt-1 font-display text-2xl font-semibold" style="color: var(--color-accent-deep);">$450 flat</div>
       </div>
     </div>
@@ -73,7 +69,7 @@ const notFor = [
   </section>
 
   <section class="section py-12">
-    <h2 class="font-display text-4xl font-semibold">The three days</h2>
+    <h2 class="font-display text-4xl font-semibold">How the three days go</h2>
     <div class="mt-8 grid gap-6 md:grid-cols-3">
       {schedule.map((s) => (
         <div class="rounded-2xl border p-6" style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
@@ -91,30 +87,23 @@ const notFor = [
         The plan is yours. <em>Take it with you.</em>
       </p>
       <p class="mt-3" style="color: var(--color-ink-soft);">
-        Every artifact above is yours to keep. No retainer. No lock-in. No upsell pressure.
+        Everything above is yours to keep. No retainer, no lock-in, no pressure to continue.
       </p>
     </div>
   </section>
 
-  <section class="section py-12">
-    <h2 class="font-display text-2xl font-semibold">This is not for you if…</h2>
-    <ul class="mt-6 space-y-3 text-sm" style="color: var(--color-ink-soft);">
-      {notFor.map((n) => <li>· {n}</li>)}
-    </ul>
-  </section>
-
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
-      <h2 class="font-display text-4xl font-semibold">Book the Snapshot.</h2>
-      <p class="mt-3" style="color: var(--color-canvas-soft);">Launch price. Three days. Yours to keep.</p>
+      <h2 class="font-display text-4xl font-semibold">Ready when you are.</h2>
+      <p class="mt-3" style="color: var(--color-canvas-soft);">Book the Snapshot — or start with a free chat if you'd like to talk first.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/contact?ref=snapshot" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+        <a href={SNAPSHOT_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
            style="background-color: var(--color-accent); color: var(--color-canvas);">
-          Book — $450
+          Book the Snapshot — $450
         </a>
-        <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+        <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
            style="color: var(--color-canvas-soft);">
-          Talk first — just say hi
+          Book a free 20-minute call
         </a>
       </div>
     </div>

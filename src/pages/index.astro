@@ -1,34 +1,35 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../siteConfig";
 
 const stats = [
-  { num: "5 days", label: "to install a Visual Cortex" },
-  { num: "12+", label: "AI design tools vetted across image, video, 3D, vector, pitch" },
-  { num: "0", label: "designers replaced. Ever." },
-  { num: "100%", label: "of artifacts are yours to keep" },
+  { num: "Days", label: "to set up — not weeks or months" },
+  { num: "On-brand", label: "every deck, post, and page looks like it belongs together" },
+  { num: "Your voice", label: "AI tuned to your style, not a generic look" },
+  { num: "Yours", label: "everything we make is yours to keep" },
 ];
 
 const doorways = [
   {
     label: "For you",
-    headline: "You, faster. On-brand.",
-    body: "Solo founders, consultants, creators, operators. We install your Brand Kernel, Prompt Library, and the two templates you'll use every week.",
+    headline: "Look like you've got a design team.",
+    body: "Solo founders, consultants, creators. We set up your brand and the AI tools that use it — so your slides, posts, and pages finally look as good as your work.",
     cta: { href: "/services/snapshot", label: "Start with the Snapshot — $450" },
-    sub: { href: "/services/visual-cortex", label: "Or the full Visual Cortex →" },
+    sub: { href: "/services/visual-cortex", label: "Or the full setup →" },
     accent: "var(--color-accent)",
   },
   {
     label: "For your team",
-    headline: "Your team, harder to outwork.",
-    body: "2 to 50 people. We ship full brand systems and ongoing templates — built AI-augmented, finished by hand.",
-    cta: { href: "/services/brand-sprint", label: "Brand & Visual Sprint" },
+    headline: "A brand your whole team can use.",
+    body: "2 to 50 people. We build your look and the simple kit that keeps everything consistent — so anyone can make on-brand work in minutes, not days.",
+    cta: { href: "/services/brand-sprint", label: "See a Brand Sprint" },
     sub: { href: "/services/pitch-deck", label: "Or a Pitch Deck Sprint →" },
     accent: "var(--color-accent-alt)",
   },
   {
     label: "For artists",
     headline: "Your voice, louder.",
-    body: "Working illustrators, designers, photographers, video artists. Sized-right pricing, artist-first stance. We respect your process.",
+    body: "Working illustrators, designers, photographers, video artists. Sized-right pricing, artist-first. We treat your style as the asset — and put AI to work amplifying it.",
     cta: { href: "/for-artists", label: "See the Artist Path — from $250" },
     sub: { href: "/for-artists/snapshot", label: "Or jump to the Style Snapshot →" },
     accent: "var(--color-ink)",
@@ -43,23 +44,27 @@ const doorways = [
       Your slides look like every other deck. <em>Yours shouldn't.</em>
     </h1>
     <p class="mt-8 max-w-2xl text-lg md:text-xl" style="color: var(--color-ink-soft);">
-      We install the AI-augmented design toolkits — Brand Kernels, Prompt Libraries, Visual Cortexes — that amplify the people doing the design work. We never replace them.
+      We set up the AI design tools — and a simple brand kit they all read from — so everything you
+      make looks sharp, consistent, and unmistakably yours. In days, not months. No design skills needed.
     </p>
     <div class="mt-10 flex flex-wrap items-center gap-4">
-      <a href="/services/snapshot" class="btn-accent">
-        Book the Design Snapshot — $450 · 3 days
+      <a href={CALL_HREF} class="btn-accent">
+        Book a free 20-minute call
       </a>
-      <a href="/contact" class="btn-ghost">Just say hi</a>
+      <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
     </div>
+    <p class="mt-4 text-sm" style="color: var(--color-ink-mute);">
+      No pitch, no jargon. Just a friendly look at how good your brand could look.
+    </p>
   </section>
 
   <!-- THESIS -->
   <section class="py-24" style="background-color: var(--color-canvas-warm);">
     <div class="section-narrow">
       <p class="text-center font-display text-3xl md:text-5xl leading-tight">
-        We amplify the humans doing the design work.
+        We make the people who do the work
         <br />
-        <em style="color: var(--color-accent-deep);">We never replace them — especially not the artists.</em>
+        <em style="color: var(--color-accent-deep);">look as good as the work they do.</em>
       </p>
     </div>
   </section>
@@ -87,8 +92,8 @@ const doorways = [
   <!-- STAT SLAB -->
   <section class="section py-24">
     <div class="mb-10">
-      <h3 class="font-display text-3xl font-semibold">What we ship.</h3>
-      <p class="mt-2 text-sm" style="color: var(--color-ink-mute);">Numbers we lead with — chosen for what AI unlocks, not what it abandons.</p>
+      <h3 class="font-display text-3xl font-semibold">What you get.</h3>
+      <p class="mt-2 text-sm" style="color: var(--color-ink-mute);">No design background required. We do the craft; you get the credit.</p>
     </div>
     <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
       {stats.map((s) => (
@@ -105,28 +110,28 @@ const doorways = [
     <div class="grid gap-12 md:grid-cols-3">
       <div>
         <div class="font-display text-4xl font-semibold" style="color: var(--color-accent);">01</div>
-        <h4 class="mt-2 font-display text-2xl font-medium">Capture</h4>
+        <h4 class="mt-2 font-display text-2xl font-medium">We capture your look</h4>
         <p class="mt-3" style="color: var(--color-ink-soft);">
-          Your visual identity gets written down — colors, type, voice, references, anti-references. The Brand Kernel any AI tool can load.
+          Your colors, type, voice, and the references you love — written down as a simple brand kit that any AI tool can read.
         </p>
       </div>
       <div>
         <div class="font-display text-4xl font-semibold" style="color: var(--color-accent);">02</div>
-        <h4 class="mt-2 font-display text-2xl font-medium">Install</h4>
+        <h4 class="mt-2 font-display text-2xl font-medium">We set up the tools</h4>
         <p class="mt-3" style="color: var(--color-ink-soft);">
-          Prompts, templates, tool loadout — all tuned to your kernel. Wired so you (or a non-designer) can produce on-brand work in 10 minutes.
+          Prompts and templates, all tuned to your brand — wired so you can make a polished deck or post in about ten minutes.
         </p>
       </div>
       <div>
         <div class="font-display text-4xl font-semibold" style="color: var(--color-accent);">03</div>
-        <h4 class="mt-2 font-display text-2xl font-medium">Amplify</h4>
+        <h4 class="mt-2 font-display text-2xl font-medium">You make it your own</h4>
         <p class="mt-3" style="color: var(--color-ink-soft);">
-          A 15-minute weekly ritual keeps the kernel current. Your taste evolves; the system follows. We teach it. You own it.
+          A quick weekly habit keeps it fresh as your taste grows. We teach it. You own it.
         </p>
       </div>
     </div>
     <div class="mt-12">
-      <a href="/method" class="btn-ghost px-0">See the full method →</a>
+      <a href="/method" class="btn-ghost px-0">See how it works →</a>
     </div>
   </section>
 
@@ -139,16 +144,17 @@ const doorways = [
         We respect your process. <em>We just want it to be louder.</em>
       </h3>
       <p class="mt-6 max-w-2xl" style="color: var(--color-canvas-soft);">
-        Two years of "AI will replace illustrators" headlines. We don't buy it. Your voice is the asset; AI is a power tool you steer. We built a sized-right path so you can engage on your terms — and stay relevant without losing what makes the work yours.
+        Your voice is the asset. AI is a power tool you steer. We built a sized-right path that keeps your
+        hands on the work and your signature on every piece — so you make more, reach further, and stay in demand.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-4">
         <a href="/for-artists" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
            style="background-color: var(--color-accent); color: var(--color-canvas);">
           See the Artist Path — from $250
         </a>
-        <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+        <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
            style="color: var(--color-canvas-soft);">
-          Or just say hi
+          Or book a free chat
         </a>
       </div>
     </div>
@@ -157,15 +163,17 @@ const doorways = [
   <!-- FIRST COHORT NOTE -->
   <section class="section py-20">
     <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-soft);">
-      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">Our first cohort</div>
+      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">Our first clients</div>
       <h3 class="mt-3 font-display text-3xl font-medium">
-        We are running our first paid Snapshots and Visual Cortexes now.
+        We're taking on our first handful of clients now.
       </h3>
       <p class="mt-3 max-w-2xl" style="color: var(--color-ink-soft);">
-        Real names, real before/afters, and real outcomes from our first clients will land here. If you want to be one of those names — at the launch price — that's why this page exists.
+        Real names, real before-and-afters, and real results will land here. Want to be one of the
+        first — at the launch price? That's exactly why this page exists.
       </p>
-      <div class="mt-6">
-        <a href="/services/snapshot" class="btn-accent">Book the Snapshot — $450</a>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={CALL_HREF} class="btn-accent">Book a free 20-minute call</a>
+        <a href="/services/snapshot" class="btn-ghost">Or the $450 Snapshot →</a>
       </div>
     </div>
   </section>
@@ -174,14 +182,14 @@ const doorways = [
   <section class="section py-24">
     <div class="mx-auto max-w-3xl text-center">
       <p class="font-display text-4xl md:text-5xl leading-tight">
-        Your kernel, your library, your templates. <em>Take it with you.</em>
+        Your brand, your tools, your templates. <em>Take it with you.</em>
       </p>
       <p class="mt-6" style="color: var(--color-ink-soft);">
-        Every artifact we make for you is yours to keep. No retainer required. No lock-in.
+        Everything we make for you is yours to keep. Start with a free chat and see how good it could look.
       </p>
       <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-        <a href="/services/snapshot" class="btn-accent">Book the Design Snapshot — $450</a>
-        <a href="/contact" class="btn-ghost">Just say hi</a>
+        <a href={CALL_HREF} class="btn-accent">Book a free 20-minute call</a>
+        <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
       </div>
     </div>
   </section>

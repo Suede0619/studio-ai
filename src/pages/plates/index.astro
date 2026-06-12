@@ -1,13 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF, BOOKING_EMAIL } from "../../siteConfig";
 
 const upcoming = [
-  "Your brand shouldn't live in a PDF.",
-  "How we make on-brand decks in 5 days, not 5 weeks.",
-  "What working artists actually need from AI tools.",
-  "The Visual Cortex: a working brain for your brand.",
-  "Glaze, Nightshade, and the artist's posture in the AI age.",
-  "Tools we use ourselves — and the ones we don't.",
+  "Your brand shouldn't live in a PDF",
+  "How to make an on-brand deck in an afternoon",
+  "What working artists actually want from AI tools",
+  "Give your brand a memory, and everything gets easier",
+  "Glaze and Nightshade: protecting your work, made simple",
+  "The AI design tools we use ourselves",
 ];
 ---
 
@@ -17,7 +18,8 @@ const upcoming = [
       Plates.
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Essays on visual identity, AI tools we actually use, and how working artists stay relevant without losing their voice.
+      Short, plain-English notes on looking good, the AI design tools we actually use, and how
+      working artists make more while keeping their voice front and center.
     </p>
   </section>
 
@@ -29,8 +31,11 @@ const upcoming = [
       </ul>
       <p class="mt-6 text-sm" style="color: var(--color-ink-soft);">
         We're publishing one a week starting soon. Want them in your inbox? Email
-        <a href="mailto:hi@nrvana.com?subject=Studio%20Notes" class="underline underline-offset-4">hi@nrvana.com</a>.
+        <a href={`mailto:${BOOKING_EMAIL}?subject=Plates`} class="underline underline-offset-4">{BOOKING_EMAIL}</a>.
       </p>
+      <div class="mt-6">
+        <a href={CALL_HREF} class="btn-accent">Book a free 20-minute call</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

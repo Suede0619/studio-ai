@@ -1,5 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../siteConfig";
+
+const promises = [
+  { t: "Your voice is the asset.", d: "We tune AI to amplify your style — so your work looks more like you, never less." },
+  { t: "Your work stays yours.", d: "You own everything we make together, and you approve every piece before it goes out." },
+  { t: "Real craft, real care.", d: "We sweat the details a logo-generator never will — type, color, motion, the feel of the thing." },
+  { t: "Plain prices, plain talk.", d: "Clear pricing, quick turnarounds, and no jargon. You always know exactly what you're getting." },
+];
 ---
 
 <BaseLayout title="About — Nrvana Studio">
@@ -8,7 +16,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       We are people who believe <em>design is for people.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Nrvana Studio is the AI design line of the Nrvana umbrella. A small, opinionated practice for individuals, small teams, and especially working digital artists who want to use AI tools well — without flattening their voice or losing their work.
+      Nrvana Studio is a small, friendly design practice that helps individuals, small teams, and
+      working artists make beautiful, on-brand work — faster — with AI as a power tool you steer.
     </p>
   </section>
 
@@ -19,29 +28,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
              style="background-color: var(--color-canvas-warm); border: 1px solid var(--color-line);"></div>
         <div class="mt-4 font-display text-2xl font-semibold">Stuart Paul</div>
         <div class="text-sm" style="color: var(--color-ink-soft);">Founder · CEO</div>
-        <div class="mt-1 text-sm italic" style="color: var(--color-ink-mute);">"We make the artists harder to outwork — not easier to skip."</div>
+        <div class="mt-1 text-sm italic" style="color: var(--color-ink-mute);">"We make the work — and the people behind it — look great."</div>
       </div>
       <div class="md:col-span-2">
         <h2 class="font-display text-3xl font-semibold">Why Nrvana Studio exists</h2>
         <p class="mt-4" style="color: var(--color-ink-soft);">
-          Two years of "AI will replace designers / illustrators / photographers / video editors" — and a lot of "AI design" services that read like they agreed. We don't. We think the field has been pitching the wrong product to the wrong people.
+          Most individuals and small teams have great work to show — and brand materials that don't do
+          it justice. The big studios are out of budget; the cheap tools all look the same. There's a
+          gap right in the middle, and that's where we live.
         </p>
         <p class="mt-4" style="color: var(--color-ink-soft);">
-          Most individuals and small teams don't need AI to replace their designer. They need a working visual layer — a brand kernel, a prompt library, a tool loadout — so the work they're already producing looks like it should. And working artists don't need AI to do their job for them. They need a partner who treats their voice as the asset and AI as a tool they steer.
-        </p>
-        <p class="mt-4" style="color: var(--color-ink-soft);">
-          That's the whole pitch. We build the layer. We price transparently. We ship in days. We hand everything back.
+          We build you a simple brand kit and set up the AI tools that use it — so your decks, posts,
+          and pages look polished and consistent, in your voice. For working artists, we go further:
+          we put AI to work amplifying your style so you can make more and reach further, with your
+          hands still on the craft. We price plainly, move in days, and hand everything to you to keep.
         </p>
 
-        <h2 class="mt-12 font-display text-3xl font-semibold">What we won't do</h2>
-        <ul class="mt-4 space-y-2 text-sm" style="color: var(--color-ink-soft);">
-          <li>· Help anyone replace their designer or illustrator with AI. Hard line.</li>
-          <li>· Imitate someone else's style to undercut them.</li>
-          <li>· Train models on a client's artists' work without explicit consent.</li>
-          <li>· Logo generators for $99. That race is to the bottom.</li>
-          <li>· Volume content production divorced from voice.</li>
-          <li>· Anything we wouldn't run on ourselves first.</li>
+        <h2 class="mt-10 font-display text-3xl font-semibold">Our promises</h2>
+        <ul class="mt-4 space-y-4">
+          {promises.map((p) => (
+            <li>
+              <div class="font-medium">{p.t}</div>
+              <div class="mt-1 text-sm" style="color: var(--color-ink-soft);">{p.d}</div>
+            </li>
+          ))}
         </ul>
+
+        <div class="mt-10">
+          <a href={CALL_HREF} class="btn-accent">Book a free 20-minute call</a>
+        </div>
       </div>
     </div>
   </section>

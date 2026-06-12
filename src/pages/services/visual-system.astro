@@ -1,15 +1,18 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
 ---
 
-<BaseLayout title="Visual System Setup — Nrvana Studio">
+<BaseLayout title="Brand Setup for Teams — Nrvana Studio">
   <section class="section pt-24 pb-12">
     <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-alt);">For your team</div>
     <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight leading-[0.95] max-w-4xl">
-      Your brand exists. <em>The operational layer doesn't.</em>
+      You've got a brand. <em>Let's make it easy to use.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      For teams that already have a brand but need the working layer: a machine-readable kernel, a tuned prompt library, and the templates everyone actually uses.
+      For teams that already have a look but need the simple, day-to-day system behind it — a brand
+      kit the AI tools can read, ready-made templates, and a few minutes of training so anyone can
+      make on-brand work.
     </p>
   </section>
 
@@ -17,27 +20,27 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div class="grid gap-4 rounded-2xl border p-8 sm:grid-cols-3"
          style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
       <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Length</div><div class="mt-1 font-display text-2xl font-semibold">1–2 weeks</div></div>
-      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Outcome</div><div class="mt-1 font-display text-2xl font-semibold">Operational layer</div></div>
-      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div><div class="mt-1 font-display text-2xl font-semibold" style="color: var(--color-accent-deep);">$4k–$8k</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">You get</div><div class="mt-1 font-display text-2xl font-semibold">A working system</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Price</div><div class="mt-1 font-display text-2xl font-semibold" style="color: var(--color-accent-deep);">$4k–$8k</div></div>
     </div>
   </section>
 
   <section class="section py-12">
     <ul class="space-y-3" style="color: var(--color-ink-soft);">
-      <li>· Brand Kernel (machine-readable version of what's in the PDF).</li>
-      <li>· Prompt Library tuned to the existing brand.</li>
-      <li>· 3–5 templates installed (deck, social, headers).</li>
-      <li>· Team training on the toolkit.</li>
-      <li>· Internal runbook so non-designers self-serve without breaking the brand.</li>
+      <li>· Your brand kit, in a form the AI tools can read and build from.</li>
+      <li>· A set of prompts tuned to your exact look and voice.</li>
+      <li>· 3–5 ready-made templates (deck, social, headers).</li>
+      <li>· A short, friendly training session for your team.</li>
+      <li>· A simple guide so anyone can make on-brand work with confidence.</li>
     </ul>
   </section>
 
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
-      <h2 class="font-display text-4xl font-semibold">Set up the working layer.</h2>
+      <h2 class="font-display text-4xl font-semibold">Make your brand easy to use.</h2>
       <div class="mt-8">
-        <a href="/contact?ref=visual-system" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
-           style="background-color: var(--color-accent); color: var(--color-canvas);">Talk through it →</a>
+        <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-accent); color: var(--color-canvas);">Book a free 20-minute call</a>
       </div>
     </div>
   </section>
