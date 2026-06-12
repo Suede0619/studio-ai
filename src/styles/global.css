@@ -10,9 +10,9 @@
   --color-ink: #0d0d0d;           /* Noir */
   --color-ink-soft: #4a4a4a;      /* Body copy on light */
   --color-ink-mute: #888888;      /* Secondary / captions */
-  --color-accent: #c5a55a;        /* Warm gold — PRIMARY */
-  --color-accent-deep: #8a6d2e;   /* Dark gold / bronze — prices, numerals, hovers */
-  --color-accent-alt: #c12c2c;    /* Ferrari red — secondary accent */
+  --color-accent: #c12c2c;        /* Ferrari Red */
+  --color-accent-deep: #a02424;   /* Red, active */
+  --color-accent-alt: #c5a55a;    /* Warm gold — secondary accent */
   --color-line: #e8e3dd;          /* Warm light border */
 
   --font-display: "EB Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
@@ -53,7 +53,7 @@
 
   ::selection {
     background-color: var(--color-accent);
-    color: var(--color-ink);
+    color: var(--color-canvas);
   }
 }
 
@@ -75,16 +75,16 @@
   }
   .btn-primary:hover {
     background-color: var(--color-accent);
-    color: var(--color-ink);
+    color: #fff;
   }
 
-  /* Accent = the gold CTA (dark text — gold is light, needs contrast) */
+  /* Accent = the Ferrari-red CTA */
   .btn-accent {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     background-color: var(--color-accent);
-    color: var(--color-ink);
+    color: #fff;
     padding: 0.95rem 2rem;
     border-radius: 0;
     font-size: 0.8125rem;
@@ -94,7 +94,7 @@
     transition: background-color 200ms ease;
   }
   .btn-accent:hover {
-    background-color: #b3923e;
+    background-color: #e03333;
   }
 
   .btn-ghost {
@@ -145,7 +145,7 @@
 
   .badge-accent {
     background-color: var(--color-accent);
-    color: var(--color-ink);
+    color: #fff;
   }
 }
 
