@@ -4,7 +4,7 @@
    Ivory + Noir, Ferrari-red as deliberate punctuation, warm-gold secondary,
    EB Garamond display serif, sharp corners, square uppercase buttons. */
 @theme {
-  --color-canvas: #f5f0eb;        /* Ivory — never pure white */
+  --color-canvas: #ffffff;        /* White page background */
   --color-canvas-soft: #faf8f5;   /* Warm white — cards */
   --color-canvas-warm: #ece5db;   /* Deeper warm ivory — alternating sections */
   --color-ink: #0d0d0d;           /* Noir */
