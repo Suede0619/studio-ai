@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "Your brand shouldn't live in a PDF";
+const description = "Brand guidelines nobody reads, and what to replace them with — a brief that AI tools can actually use.";
+const date = "June 26, 2026";
+---
+
+<BaseLayout title={`${title} — Nrvana Studio`} description={description}>
+  <section class="section pt-24 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">Plates · Brand</div>
+    <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight leading-[0.95] max-w-3xl">
+      {title}
+    </h1>
+    <p class="mt-5 text-sm" style="color: var(--color-ink-mute);">{date}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose">
+      <p>You have brand guidelines. Maybe they're a careful, designed document — color palettes, font stacks, logo clearspace, the works. Maybe they're rougher: a shared folder, a Notion page, a loose collection of reference screenshots.</p>
+      <p>Either way, nobody is reading them.</p>
+      <p>Not regularly. Not your contractors. Certainly not the AI tools you're now trying to use to work faster.</p>
+      <p>This isn't a critique of your guidelines. It's that the PDF format was designed for a different era. Here's what works instead.</p>
+
+      <h2>Why PDF brand guides don't transfer</h2>
+      <p>A style guide describes what your brand looks like. It doesn't tell a tool how to think, decide, or make trade-offs in your voice and aesthetic. It doesn't answer the questions that come up in real creative work: "Should this headline be punchy or understated?" "What image fits here when the template doesn't?" "Would we do this in red or let it breathe?"</p>
+      <p>Those are judgment calls. Brand guides describe outcomes — they don't embed judgment.</p>
+      <p>AI tools need something closer to a briefing than a rulebook.</p>
+
+      <h2>What AI actually needs to sound and look like you</h2>
+      <p>Three things.</p>
+      <p><strong>A voice file.</strong> Not adjectives about your brand ("bold, warm, direct") — examples. Two or three sentences written in your voice, next to the same idea written the way you'd never write it. The contrast is what a tool can actually learn from.</p>
+      <p><strong>A visual direction note.</strong> Not hex codes and font sizes — intent. "We're editorial, not corporate. Photography over illustration, white space over density, serif display type." The feeling, not the spec sheet.</p>
+      <p><strong>A prompt library.</strong> Fifteen to twenty-five ready-to-use prompts tuned to your actual output types: deck slides, social captions, email headers, product mockups, copy variations. Templates that already know what you're going for, so you start from 80% instead of zero.</p>
+      <p>Together, these are what we call a <strong>Visual Cortex</strong>. Your brand, in a form AI tools can read.</p>
+
+      <h2>The 15-minute start</h2>
+      <p>You don't need to rebuild your guidelines. Start smaller.</p>
+      <p>Open a blank document and write three things:</p>
+      <ol>
+        <li>One paragraph about who your audience is and what they should feel after experiencing your brand at its best.</li>
+        <li>Three sentences you'd be proud to have written — not aspirational, actual sentences that sound like you.</li>
+        <li>Two things that are off-limits. ("Never use corporate stock photography." "Never use the word 'innovative.'")</li>
+      </ol>
+      <p>That's the nucleus. Everything else grows from there.</p>
+
+      <h2>The full thing</h2>
+      <p>We build out the complete Visual Cortex in our <a href="/services/snapshot">Design Snapshot</a> and <a href="/services/visual-cortex">Personal Visual Cortex</a> engagements. You leave with a brand that AI tools can actually use — which means faster output that consistently looks and sounds like you, not like a template.</p>
+      <p><a href={CALL_HREF}>Book a free 30-minute call</a> if you'd like to talk through your situation first.</p>
+    </div>
+  </section>
+
+  <section class="section py-16">
+    <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
+      <h2 class="font-display text-3xl font-semibold">Give your brand a memory.</h2>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="/services/visual-cortex" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-accent); color: var(--color-canvas);">
+          See the Visual Cortex — $2,500
+        </a>
+        <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+           style="color: var(--color-canvas-soft);">
+          Book a free 30-minute call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-8">
+    <a href="/plates" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All plates</a>
+  </section>
+</BaseLayout>
