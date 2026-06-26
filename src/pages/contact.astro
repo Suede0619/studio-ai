@@ -3,14 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { CALL_HREF, SNAPSHOT_HREF, BOOKING_EMAIL } from "../siteConfig";
 ---
 
-<BaseLayout title="Contact — Nrvana Studio">
+<BaseLayout title="Contact · Nrvana Studio">
   <section class="section pt-24 pb-12">
     <h1 class="font-display text-6xl font-semibold tracking-tight leading-[0.95]">
       Two easy ways to start. <em>Pick whichever feels right.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
       Not sure yet? Book a free chat. Ready to go? Book the Snapshot. Either way, you're talking to
-      a real person — us.
+      a real person: us.
     </p>
   </section>
 
@@ -20,8 +20,8 @@ import { CALL_HREF, SNAPSHOT_HREF, BOOKING_EMAIL } from "../siteConfig";
         <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Start free</div>
         <h2 class="mt-3 font-display text-3xl font-semibold">Book a free 30-minute call</h2>
         <p class="mt-3 text-sm flex-1" style="color: var(--color-ink-soft);">
-          A relaxed look at your brand and where it could shine. No jargon, no pitch, no commitment —
-          just honest, friendly advice. Most people start here.
+          A relaxed look at your brand and where it could shine. No jargon, no pitch, no commitment,
+          just honest friendly advice. Most people start here.
         </p>
         <a href={CALL_HREF} class="btn-accent mt-6">
           Book your free call →
@@ -42,7 +42,7 @@ import { CALL_HREF, SNAPSHOT_HREF, BOOKING_EMAIL } from "../siteConfig";
     </div>
 
     <p class="mt-8 text-sm" style="color: var(--color-ink-mute);">
-      Prefer email? Just write us at <a href={`mailto:${BOOKING_EMAIL}`} class="underline underline-offset-4">{BOOKING_EMAIL}</a> — we answer every message ourselves.
+      Prefer email? Just write us at <a href={`mailto:${BOOKING_EMAIL}`} class="underline underline-offset-4">{BOOKING_EMAIL}</a>. We answer every message ourselves.
     </p>
   </section>
 </BaseLayout>
