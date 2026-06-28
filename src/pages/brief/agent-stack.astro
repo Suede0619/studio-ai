@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Agent Stack Is Thickening Below the Chat Layer";
+const description = "Most AI commentary still acts like the chat interface is the product and everything underneath is implementation detail.";
+const date = "June 19, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-agent-stack-is-thickening-below";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · June 19, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>The visible assistant is becoming the fruiting body. The real moat is the mycelium.</p>
+
+      <p>While product teams race to ship prettier chat interfaces and more dramatic demos, the significant engineering work is happening in the layers you cannot easily see. Memory systems that persist context across sessions. Compression infrastructure that strips token waste before it reaches the model. Sandboxed runtimes that make agent actions inspectable and reversible. Local-first architectures that keep capability sovereignty with the operator. That is where durable advantage is forming, quietly, beneath the surface narrative.</p>
+
+      <h2>Memory as runtime infrastructure</h2>
+      <p>Persistent memory is not optional polish. It is an economic prerequisite. A system that forgets repository structure, previous reasoning, or prior decisions faces compounding costs at every session boundary. Every forgotten fact has to be re-derived, re-searched, or re-injected into context. Multiply that across dozens of daily interactions and the tax becomes material. The teams treating memory as core infrastructure, not a nice-to-have, are building metabolisms that get more efficient over time rather than resetting to zero.</p>
+
+      <h2>Compression as cognitive substrate</h2>
+      <p>The same documentation corpus can measure as 180,000 tokens in raw HTML and 478 tokens as clean markdown. Identical information. A 99.7% reduction in what the model has to process. That is not a formatting optimization. It is a business model question. Systems that ingest noisy, bloated surfaces face deteriorating unit economics as usage scales. The winners will not just access more data. They will make access cheaper, cleaner, and more signal-dense before a single token reaches the model.</p>
+
+      <h2>Sandboxing as product quality</h2>
+      <p>Better models increase governance demands, not reduce them. The instinct to give agents more access to more surfaces runs directly into a wall: uncontrolled execution is a liability, not a feature. The market is quietly learning that sandboxes, replay capabilities, scoped permissions, and observable execution are not compliance overhead. They are what separates a demo from a deployable runtime. The shift is from "can the model act" to "can the operator see and recover what the model did."</p>
+
+      <h2>Local-first as reversibility</h2>
+      <p>The self-hosting trend and the AI infrastructure trend are expressions of the same appetite: users want systems they can inspect, constrain, and exit. That demand is not fringe, and it is not primarily ideological. It is the practical recognition that once software is authorized to act on your behalf, opacity stops being a mild inconvenience and becomes a governance problem. The builders who design for reversibility and portability now will collect the buyers who need those properties in production.</p>
+
+      <p>The chat interface is the frosting. The infrastructure underneath is the cake. The market is starting to price that correctly.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>

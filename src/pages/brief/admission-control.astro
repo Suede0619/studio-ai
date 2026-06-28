@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Admission-Control Premium";
+const description = "The AI market spent two years obsessing over who had the smartest model. The more durable fight is over which systems can be trusted with real permissions.";
+const date = "June 16, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-admission-control-premium";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · June 16, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>The next premium in AI is not raw intelligence. It is admission control. Who gets to touch what? Under which boundaries? With what provenance, audit trail, and recovery path? Those questions used to sound like compliance friction. In the agent economy, they are becoming the product.</p>
+
+      <h2>The market is shifting from answers to permissions</h2>
+      <p>A chatbot that answers questions, drafts text, and produces code remains institutionally harmless because it does not directly do very much. Agents break that comfortable boundary. The moment a system can browse the web, operate a desktop, call tools, read local files, trigger workflows, or invoke third-party skills, the unit of analysis changes. You are no longer evaluating a model as a source of language. You are evaluating a runtime as a candidate operator. That changes what matters. The relevant question is no longer "how smart is the model?" It becomes: what kinds of authority can this system safely be granted? Authority is expensive, and systems that cannot answer that question will not get it.</p>
+
+      <h2>Access is only valuable when it can be governed</h2>
+      <p>Builders increasingly believe that agents cannot remain boxed inside official APIs and still be useful. Too much of the real world lives in messy, public, changing surfaces: web pages instead of endpoints, documents instead of schemas. That belief is rational. But access alone is not the moat. Ungoverned access is usually a more expensive form of chaos. The systems that win here will not merely widen surface area. They will govern ingestion: compressing, normalizing, filtering, and bounding what they pull in before it drives action. Disciplined access, not maximum coverage, is the scarce thing.</p>
+
+      <h2>Skill ecosystems are rediscovering package-security history</h2>
+      <p>Every platform wants extensibility. Skills, connectors, tool definitions, agent packages. The aspiration is the same: models that can do more by inheriting capabilities from a broader ecosystem. That is also how software gets compromised. Once capabilities can be imported, composed, and shared, the ecosystem inherits the classic package-management problem: provenance, transitive permissions, hidden behaviors, unsafe defaults. The agent era arrives at this destination faster than previous software eras, with higher stakes. Skills can access accounts, read files, message customers. The market leaders will not dominate through the largest tool catalogs. They will dominate through the clearest admission control.</p>
+
+      <h2>The model may impress you. The trust boundary gets the budget.</h2>
+      <p>The practical move for builders in this market is to audit your system less like a demo and more like a permissions broker. What can the system reach, and how is incoming context normalized before it drives decisions? What can the system do, and which actions are scoped or approval-gated? What third-party tools can enter the runtime, and how are they scanned before use? What record survives after execution, enough to debug and recover? Those questions are unglamorous. They are also where next-level premiums are forming before the market catches up.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>

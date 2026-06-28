@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Portability Premium";
+const description = "Most AI companies still talk like the model layer is the whole game. The moat that survives tool switching is built one layer below that conversation.";
+const date = "June 12, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-portability-premium-why-the-next";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · June 12, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>The model is not the moat. The behavior that survives switching the model is the moat. That distinction is small in a demo and enormous in production.</p>
+
+      <p>Infrastructure repositories are pulling developer attention away from model wrappers: parsing libraries, plugin systems, memory frameworks, orchestration harnesses. This is not a trend away from AI capability. It is the natural maturation of a market realizing that capability without portability is a dependency, not an asset. Teams building on fragile format dependencies, model-specific APIs, and single-provider context stores are accumulating technical debt that will surface at the worst possible moment. Teams building portable infrastructure are accumulating durable advantages that compound across model generations.</p>
+
+      <h2>Context shaping is economic strategy</h2>
+      <p>Converting raw HTML to markdown reduces token consumption by up to 99.7% for the same information. That compression is not a preprocessing detail. It is a strategic control point. Systems with clean, normalized input formats are not just cheaper to operate. They are more reliable, lower latency, easier to debug, and critically, less dependent on any specific model's ability to handle noise. When you control the shape of the context, you reduce the cost of switching the intelligence layer underneath it.</p>
+
+      <h2>The behavior contract layer</h2>
+      <p>Real differentiation does not live in model provider selection. It lives in the layers that handle memory, routing, approvals, exceptions, and recovery. These layers need to be durable across model changes, provider shifts, and capability upgrades. Teams that architect these layers as model-independent abstractions hold an option that teams building tight model integrations do not: the ability to swap the intelligence layer without rebuilding the operating logic. That option becomes valuable exactly when model selection becomes commoditized, which is the direction the market is clearly moving.</p>
+
+      <h2>Four properties of portable systems</h2>
+      <p>Portable systems share four characteristics. Context independence: they function without fragile format dependencies on any specific model. State continuity: they preserve reasoning history and constraints across sessions and model switches. Interface discipline: they expose capabilities through reusable components rather than one-off model calls. Recovery logic: they handle failures through replay and escalation rather than silent collapse. Teams auditing their systems against these properties are identifying where their portability is real and where it is assumed. The gaps they find now are cheaper to close than the gaps that surface in production at scale.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>

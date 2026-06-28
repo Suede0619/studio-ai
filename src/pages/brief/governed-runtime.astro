@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Governed Runtime Premium";
+const description = "Most people still analyze AI like the model is the product and everything around it is packaging.";
+const date = "June 15, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-governed-runtime-premium";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · June 15, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>The model is not the product. The runtime is the product. That reframing is overdue, and the market is starting to price it.</p>
+
+      <p>Three trends arriving simultaneously are converging on the same insight. Agent systems that can reach the real web, act within real interfaces, and compose third-party capabilities need more than intelligence. They need runtime governance: the infrastructure that makes intelligent action safe to delegate, possible to audit, and practical to recover when things go wrong. The builders who internalize this distinction early are building toward durable margins. The ones still optimizing the demo layer are building toward commoditization.</p>
+
+      <h2>Runtime competition replaces model competition</h2>
+      <p>Winners are no longer determined by which team ships the best benchmark. As model capability converges, the differentiator shifts to what surrounds the model: how it accesses the world, how it executes in it, how its actions are tracked and bounded. Broad internet access, computer-use execution layers, and capability scanning are not adjacent features. They are the shape of the next competitive surface. Teams still running model horse races are reading the wrong scoreboard.</p>
+
+      <h2>Access becomes strategic when it can be governed</h2>
+      <p>Real-world data lives in messy, fragmented, rate-limited surfaces. The advantage goes to systems that retrieve information efficiently while maintaining context hygiene through effective filtering. Access for its own sake is just expensive noise. The token arithmetic is unforgiving: raw HTML at 180,000 tokens versus 478 tokens of clean markdown, same information. Scaling an ungoverned access layer means scaling the cost penalty of every messy token. The moat is not reach. It is disciplined reach.</p>
+
+      <h2>Computer use becomes infrastructure, not spectacle</h2>
+      <p>Computer-use demonstrations matured quickly from novelty to engineering challenge. The initial "can it click?" era is over. What matters now is reproducibility, observability, replay capability, isolation, policy controls, and failure recovery. These are not features bolted onto a demo. They are the architecture that makes computer-use deployable in real workflows. Value has migrated from the dexterity layer to the governance layer, and it is not migrating back.</p>
+
+      <h2>Governance consciousness is the new product signal</h2>
+      <p>Broader cultural trends toward self-hosting, local control, and inspectable software are not separate from the agent infrastructure conversation. They are the same conversation. Users who want to understand what software is doing on their behalf are exactly the users who will pay for governed runtimes with explicit permissions and maintained histories. That buyer is not fringe. That buyer is the enterprise, the serious operator, and increasingly the individual user who has had one too many opaque failures. Governability that was once a niche concern is becoming a prerequisite for deployment.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>

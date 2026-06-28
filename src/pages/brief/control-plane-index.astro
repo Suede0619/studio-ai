@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Control-Plane Index";
+const description = "If you still evaluate AI progress by model demos, you are reading the wrong tape. The real market just moved below the model.";
+const date = "June 1, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-control-plane-index-why-ais-real";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · June 1, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>The AI market that matters is not the one being reported. The demo layer, the benchmark releases, the model company announcements: these are the visible surface. Below them, a different market is forming, and it is compounding faster.</p>
+
+      <p>The control-plane layer is where intelligence becomes usable: routing, memory, context shaping, execution policy, verification, observability. The teams building this layer are not making flashy announcements. They are building the infrastructure that every serious AI deployment will need to run on, and they are building it while the media is still arguing about benchmark scores. That is a useful competitive position to hold.</p>
+
+      <h2>Model advantage behaves like a feature. Harness advantage behaves like infrastructure.</h2>
+      <p>Model improvements are real, but they are transient. A frontier advantage today is a commodity capability within 12 to 18 months. Execution infrastructure is different. It compounds. A routing layer that correctly routes by task risk, a memory system that maintains coherent state across sessions, a verification layer that catches failures before they cascade: these advantages deepen with each deployment, each failure handled, each workflow debugged. The model renter and the harness builder are playing different games, and the harness builder's game gets easier over time while the model renter's gets more expensive.</p>
+
+      <h2>The architecture that compounds</h2>
+      <p>Traditional chatbot architecture: user prompt to model response to human review and patch. The control-plane architecture is different: intent routing to context shaping to execution policy to verification to memory persistence. Each layer creates data, and that data improves the next run. A system that routes well generates information about what good routing looks like. A system that verifies its own outputs generates information about where failures concentrate. The compounding is not metaphorical. It is structural.</p>
+
+      <h2>What the next six months reward</h2>
+      <p>Serious buyers are no longer asking which model is smartest. They are asking workflow integration questions, cost-at-scale questions, operational control questions, and recovery questions. The teams that can answer those questions with production evidence, not benchmarks, are the ones whose pipelines are filling. The control-plane layer is not adjacent to AI's real market. It is AI's real market, just running slightly ahead of the headline narrative.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>

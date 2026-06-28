@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Legibility Premium";
+const description = "The next AI moat is not more access. It is the ability to turn messy access into trustworthy action.";
+const date = "June 17, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-legibility-premium";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · June 17, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>Intelligence is getting cheaper. Authority is getting more expensive. The premium is migrating toward the builders who reduce ambiguity faster than they expand capability.</p>
+
+      <p>For most of the current AI cycle, the race was about access: access to more data, better models, broader tool ecosystems. That access remains valuable. But access without interpretation creates a different kind of problem. When agents ingest raw HTML, they struggle to distinguish signal from markup, context from decoration. The result is not better capability. It is noisier, more expensive, less reliable capability at scale.</p>
+
+      <h2>Intelligence is no longer the scarcest resource</h2>
+      <p>Industry focus has moved. The real market demand is increasingly centered not on which model reasons best, but on which systems make AI action comprehensible and governable. As model quality converges toward commodity, the legibility of what a system does, why it does it, and what happens when it fails becomes the differentiator. The builders optimizing for that property now are not being cautious. They are being early to a repricing.</p>
+
+      <h2>Filtering is a product, not a feature</h2>
+      <p>The compression signal is sharp: the same documentation measured as 180,000 tokens in HTML compresses to 478 tokens as clean markdown. Same information, 99.7% less token consumption. This reframes the problem entirely. The challenge of context is not volume. It is hygiene. Retrieval systems that convert messy surfaces into clean, structured context are not doing preprocessing. They are doing product work. The model is only as legible as the substrate it reads from.</p>
+
+      <h2>Computer use requires trust, not just capability</h2>
+      <p>As agents gain the ability to click, navigate, and execute tasks, operators need visibility into their decisions. The market is learning this the way it always learns new infrastructure lessons: by discovering what breaks in production. Sandboxes, replay stacks, audit traces, and behavioral benchmarks are not nice-to-haves for agent deployments. They are what makes the capability legible enough to trust. A system that can act but cannot explain what it did is not an operator. It is a risk.</p>
+
+      <h2>The omniscience trap</h2>
+      <p>There is a seductive wrong answer to all of this: more visibility everywhere. More dashboards, more summaries, more centralized monitoring. The instinct sounds disciplined. In practice it produces theater. The difference between governed autonomy and magnified surveillance is whether the system creates competent local action inside clear constraints, or simply makes everything visible to a center that cannot act on what it sees. True legibility means clear boundaries, coherent abstractions, and useful explanations. Not maximal observation. The builders who understand that distinction are building the durable version of this market.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>

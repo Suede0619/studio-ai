@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Agent Infrastructure Rotation";
+const description = "Most people still think the AI race is a model race. GitHub is telling a different story.";
+const date = "May 28, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-agent-infrastructure-rotation";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · May 28, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>Deployment compounds while demos decay. That asymmetry is reshaping where the serious engineering attention is going, and the direction of travel is clear for anyone paying attention to the right signals.</p>
+
+      <p>The highest-velocity repositories are not model architectures or training improvements. They are orchestration layers, quality-control systems, indexing pipelines, and execution harnesses. This is not a trend away from AI capability. It is the natural market signal that raw capability has crossed the threshold where deployment infrastructure becomes the binding constraint. The model race was round one. The infrastructure race is round two, and round two lasts longer.</p>
+
+      <h2>Three structural forces behind the rotation</h2>
+      <p>Context as economic constraint: token consumption directly impacts costs, and format discipline (converting HTML to markdown) can reduce that consumption by 99.7% for identical information. That efficiency cascades into lower costs, reduced latency, improved reliability, and reduced vendor dependency. Error costs at scale: when an agent executes a bad workflow at volume, compound losses accrue, wrong actions, retries, overhead, and trust erosion. Staged verification cycles prevent failures from propagating into expensive remediation. Reusable primitives beat novelty: durable harnesses outcompete viral prompts because they amortize complexity across projects and teams.</p>
+
+      <h2>The architecture that matters</h2>
+      <p>Traditional chatbot architecture moves from user prompt to model response to human patch. The control-plane architecture moves through intent routing, context shaping, execution policy, verification, and memory persistence. Each stage generates data. That data improves the next run. The advantage is not a single better output. It is a system that learns its own failure modes and corrects them before they reach production users.</p>
+
+      <h2>Five infrastructure layers creating competitive advantage</h2>
+      <p>A routing layer that directs queries by risk and complexity. A memory layer that maintains persistent state across sessions. A contract layer that enforces structured output schemas. A verification layer that validates outputs before they drive downstream action. An observability layer that logs enough to debug production failures quickly. Teams that have all five layers working are operating in a different quality regime than teams with one or two. The gap between them is not visible in a demo. It becomes very visible at production scale.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>

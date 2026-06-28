@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { BOOKING_EMAIL } from "../../siteConfig";
+
+const posts = [
+  {
+    title: "The Agent Stack Is Thickening Below the Chat Layer",
+    description: "Most AI commentary still acts like the chat interface is the product and everything underneath is implementation detail.",
+    date: "June 19, 2026",
+    href: "/brief/agent-stack",
+  },
+  {
+    title: "The Governability Split",
+    description: "The next AI divide is not between smart models and dumb models. It is between systems you can trust to operate and systems that only look impressive in a demo.",
+    date: "June 18, 2026",
+    href: "/brief/governability-split",
+  },
+  {
+    title: "The Legibility Premium",
+    description: "The next AI moat is not more access. It is the ability to turn messy access into trustworthy action.",
+    date: "June 17, 2026",
+    href: "/brief/legibility-premium",
+  },
+  {
+    title: "The Admission-Control Premium",
+    description: "The AI market spent two years obsessing over who had the smartest model. The more durable fight is over which systems can be trusted with real permissions.",
+    date: "June 16, 2026",
+    href: "/brief/admission-control",
+  },
+  {
+    title: "The Governed Runtime Premium",
+    description: "Most people still analyze AI like the model is the product and everything around it is packaging.",
+    date: "June 15, 2026",
+    href: "/brief/governed-runtime",
+  },
+  {
+    title: "The Portability Premium",
+    description: "Most AI companies still talk like the model layer is the whole game. The moat that survives tool switching is built one layer below that conversation.",
+    date: "June 12, 2026",
+    href: "/brief/portability-premium",
+  },
+  {
+    title: "The Control-Plane Index",
+    description: "If you still evaluate AI progress by model demos, you are reading the wrong tape. The real market just moved below the model.",
+    date: "June 1, 2026",
+    href: "/brief/control-plane-index",
+  },
+  {
+    title: "The Compression Arbitrage",
+    description: "Everyone is still arguing about who has the smartest model. The winners are building the most efficient metabolisms.",
+    date: "May 29, 2026",
+    href: "/brief/compression-arbitrage",
+  },
+  {
+    title: "The Agent Infrastructure Rotation",
+    description: "Most people still think the AI race is a model race. GitHub is telling a different story.",
+    date: "May 28, 2026",
+    href: "/brief/agent-infrastructure-rotation",
+  },
+  {
+    title: "The Substrate Conviction Loop",
+    description: "Markets say fear. Builders say ship. Both are right, and both are missing the same layer.",
+    date: "May 27, 2026",
+    href: "/brief/substrate-conviction-loop",
+  },
+  {
+    title: "The Execution Substrate Premium",
+    description: "Most market participants are reading this cycle with yesterday's map.",
+    date: "May 26, 2026",
+    href: "/brief/execution-substrate-premium",
+  },
+  {
+    title: "The Wait Is the Signal",
+    description: "Most people are reading 2026 as a contradiction. It is not. It is a two-liquidity market, and execution liquidity is the scarce half.",
+    date: "May 25, 2026",
+    href: "/brief/wait-is-the-signal",
+  },
+];
+---
+
+<BaseLayout title="Brief · Nrvana Studio" description="Analysis on AI infrastructure, design systems, and where the real leverage is forming.">
+  <section class="section pt-20 pb-12">
+    <h1 class="font-display text-5xl font-semibold tracking-tight">
+      Brief.
+    </h1>
+    <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Thinking on AI infrastructure, creative tools, and where durable value is quietly forming
+      below the surface of the industry. Clear writing, no noise.
+    </p>
+  </section>
+
+  <section class="section pb-16">
+    <div class="space-y-px border-t" style="border-color: var(--color-line);">
+      {posts.map((p) => (
+        <a href={p.href}
+           class="flex flex-col gap-2 border-b py-8 transition hover:bg-[var(--color-canvas-soft)] px-1 -mx-1"
+           style="border-color: var(--color-line);">
+          <div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">{p.date}</div>
+          <h2 class="font-display text-2xl font-semibold leading-tight">{p.title}</h2>
+          <p class="text-sm max-w-2xl" style="color: var(--color-ink-soft);">{p.description}</p>
+          <div class="mt-1 text-sm font-medium" style="color: var(--color-accent);">Read →</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section py-12">
+    <div class="rounded-2xl p-8" style="background-color: var(--color-canvas-soft);">
+      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">From the research stack</div>
+      <p class="mt-4 max-w-xl" style="color: var(--color-ink-soft);">
+        Brief is the analytical writing from Sedim3nt, focused on AI infrastructure and the
+        layers where durable creative leverage is quietly forming. Published in full at
+        <a href="https://sedim3nt.substack.com" target="_blank" rel="noopener"
+           class="underline underline-offset-4">sedim3nt.substack.com</a>.
+      </p>
+      <p class="mt-4 text-sm" style="color: var(--color-ink-soft);">
+        Want it in your inbox?
+        <a href={`mailto:${BOOKING_EMAIL}?subject=Brief`} class="underline underline-offset-4">{BOOKING_EMAIL}</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

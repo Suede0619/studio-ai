@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
+
+const title = "The Governability Split";
+const description = "The next AI divide is not between smart models and dumb models. It is between systems you can trust to operate and systems that only look impressive in a demo.";
+const date = "June 18, 2026";
+const substack = "https://sedim3nt.substack.com/p/the-governability-split";
+---
+
+<BaseLayout title={`${title} · Brief · Nrvana Studio`} description={description}>
+  <section class="section pt-20 pb-6">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent);">Brief · June 18, 2026</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl leading-tight">{title}</h1>
+    <p class="mt-4 text-lg max-w-2xl" style="color: var(--color-ink-soft);">{description}</p>
+  </section>
+
+  <section class="section py-10">
+    <div class="prose max-w-2xl">
+      <p>Intelligence is still scarce enough to be marketable. Governability is becoming scarce enough to be decisive. The two are being priced separately, and the gap between them is where the next market structure forms.</p>
+
+      <p>For two years the AI narrative was mostly framed as a race for raw cognition. Which model reasons better? Which benchmark moved? Which company added the longest context window or the most cinematic product demo? That frame is now missing the deeper action. The newest cluster of signals points to a different bottleneck: not whether the system is impressive, but whether it can be trusted with real authority.</p>
+
+      <h2>The question that changes everything</h2>
+      <p>A chatbot can be impressive while remaining institutionally harmless. It answers, it drafts, it suggests. The model can be overconfident or wrong, but the damage radius is bounded by the fact that it does not directly do very much. Agents break that boundary. The moment a system can browse the web, operate a desktop, call tools, read files, or trigger third-party workflows, the relevant question is no longer "how smart is the model?" It becomes: "what kinds of authority can this system safely be granted?" Authority is expensive. And systems that cannot answer that question cleanly will not get it.</p>
+
+      <h2>Web access as a margin problem</h2>
+      <p>Broad agent web access has obvious appeal. Real workflows live in dashboards, PDFs, legacy systems, and interfaces never designed for machines. Agents that can reach those surfaces are genuinely useful. But there is a hidden constraint most teams are not pricing: unstructured access creates economic liability. The same documentation corpus measured as 180,000 tokens in raw HTML compresses to 478 tokens as clean markdown. That is the same information at 99.7% less token cost. At scale, the HTML overhead alone represents thousands of dollars per agent per year. The market will discover that disciplined access, not maximum surface area, is the real moat.</p>
+
+      <h2>Computer use makes ambiguity expensive</h2>
+      <p>Early computer-use evaluations were essentially magic shows. Could the model move a cursor? Click a form? Navigate a web app? Those demonstrations proved possibility. But possibility is not deployment. The infrastructure that matters is what happens after the model acts: sandboxes, replay capability, scoped permissions, observable state, recovery paths. A model clicking a button without evidence trails is not an operator. It is a liability with dexterity. When systems can browse inboxes, edit customer records, and trigger real workflows, every failure stops being a reasoning miss and starts being an operational event.</p>
+
+      <h2>The sovereignty demand is a governance demand</h2>
+      <p>The self-hosting trend, the debloating utilities, the preference for on-premises deployment are often misread as anti-SaaS sentiment. There is a deeper instinct beneath them. Users want software they can inspect, constrain, and leave. Once software begins acting on their behalf, opacity stops being a mild annoyance. It becomes a direct governance problem. The agent builders who design for revocable access, exportable context, inspectable logs, and practical exit capability will capture the serious buyers. Governability is not a defensive feature. It is becoming the product.</p>
+    </div>
+  </section>
+
+  <section class="section py-10">
+    <div class="flex flex-wrap items-center gap-4 border-t pt-8" style="border-color: var(--color-line);">
+      <a href={substack} target="_blank" rel="noopener" class="btn-accent">
+        Full analysis on Substack →
+      </a>
+      <a href={CALL_HREF} class="btn-ghost">Book a free call</a>
+    </div>
+  </section>
+
+  <section class="section py-6">
+    <a href="/signal" class="text-sm underline underline-offset-4" style="color: var(--color-ink-mute);">← All Brief</a>
+  </section>
+</BaseLayout>
