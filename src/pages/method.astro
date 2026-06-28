@@ -2,49 +2,100 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { CALL_HREF } from "../siteConfig";
 
-const steps = [
-  { t: "We capture your look", d: "Your colors, type, voice, and the references you love, written down as a simple brand kit any AI tool can read. The thing most 'AI design' tools skip entirely." },
-  { t: "We set up the tools", d: "Prompts and templates, all tuned to your brand, in the apps you already use, so a polished deck or post takes about ten minutes." },
-  { t: "You make it your own", d: "A quick weekly habit keeps it fresh as your taste grows. We teach it. You own it. It travels with you, always." },
+const phases = [
+  {
+    n: "01",
+    t: "We learn your look",
+    full: "We start with a conversation about your visual world: the work you make, the references you love, the feeling you're going for. We look at anything that currently carries your brand (slides, social posts, a website, a portfolio). You don't need to prep anything. We just look together.",
+    output: "A brand brief: your colors, type choices, and visual references captured clearly for the first time.",
+  },
+  {
+    n: "02",
+    t: "We write it down as a brand kit",
+    full: "Most AI design tools fail because they start from nothing every time. We fix that by giving your AI something to read from: a simple, structured brand kit with your colors, typefaces, voice notes, and reference examples. This is the file that makes everything downstream consistent.",
+    output: "A brand kit file your AI tools can actually use, in the formats they expect.",
+  },
+  {
+    n: "03",
+    t: "We set up the tools and templates",
+    full: "We configure the AI design tools that fit your workflow, load your brand kit into them, and build the two or three templates you will actually use: a deck template, a social template, whatever matters most for your work. We test them with real content to make sure they look right.",
+    output: "Tools set up, templates ready, a working setup from day one.",
+  },
+  {
+    n: "04",
+    t: "We hand it all to you",
+    full: "Everything is yours to keep. We walk you through a short weekly habit for keeping your brand kit current as your taste evolves, and we stay available through the settling-in window. After that, no retainer required.",
+    output: "Full ownership of all files, tools, and templates. Nothing locked.",
+  },
+];
+
+const qa = [
+  {
+    q: "I'm not a designer. Will I be able to use what you build?",
+    a: "Yes. That is the whole point. We build setups for people who should not have to think about design every time they make something.",
+  },
+  {
+    q: "Which AI tools do you use?",
+    a: "We use the tools that make sense for your workflow: Canva AI, Adobe Firefly, Midjourney, ChatGPT, and others depending on what you already have. We match the setup to you.",
+  },
+  {
+    q: "How long does the Snapshot take vs the full setup?",
+    a: "The Design Snapshot takes three days. The full Visual Cortex setup takes five to seven days. You never wait on us.",
+  },
+  {
+    q: "What if my brand needs change later?",
+    a: "Your brand kit is a file you own. Update it yourself, or come back to us. The habit we teach you makes it easy to keep current.",
+  },
 ];
 ---
 
 <BaseLayout title="How it works · Nrvana Studio">
   <section class="section pt-24 pb-12">
     <h1 class="font-display text-6xl font-semibold tracking-tight leading-[0.95] max-w-4xl">
-      The trick to AI that looks like <em>you.</em>
+      We give AI something to read. <em>Then it sounds like you.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Generic AI makes generic-looking work. The difference is a simple brand kit it can read from,
-      so everything comes out in your style. We build that, and set it all up for you.
+      Generic AI tools produce generic-looking work because they start from nothing. We solve that
+      by building a simple brand kit your tools can actually read, then setting everything up around it.
     </p>
   </section>
 
   <section class="section py-12">
-    <div class="grid gap-10 md:grid-cols-3">
-      {steps.map((s, i) => (
-        <div>
-          <div class="font-display text-4xl font-semibold" style="color: var(--color-accent);">{String(i + 1).padStart(2, "0")}</div>
-          <h2 class="mt-2 font-display text-2xl font-medium">{s.t}</h2>
-          <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">{s.d}</p>
+    <div class="space-y-16">
+      {phases.map((p) => (
+        <div class="grid gap-8 md:grid-cols-[5rem_1fr]">
+          <div class="font-display text-5xl font-semibold leading-none" style="color: var(--color-accent);">{p.n}</div>
+          <div>
+            <h2 class="font-display text-3xl font-semibold">{p.t}</h2>
+            <p class="mt-4 max-w-2xl" style="color: var(--color-ink-soft);">{p.full}</p>
+            <p class="mt-4 text-sm font-medium" style="color: var(--color-accent-deep);">
+              You get: {p.output}
+            </p>
+          </div>
         </div>
       ))}
     </div>
   </section>
 
-  <section class="section py-12">
-    <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-warm);">
-      <p class="font-display text-2xl">
-        You don't need to be a designer. <em>That's our job.</em>
-      </p>
-      <p class="mt-3" style="color: var(--color-ink-soft);">
-        We handle the craft. You get work that looks sharp, consistent, and unmistakably yours.
-      </p>
+  <section class="section py-12 border-t" style="border-color: var(--color-line);">
+    <h2 class="font-display text-3xl font-semibold">Common questions</h2>
+    <div class="mt-8 space-y-8 max-w-2xl">
+      {qa.map((item) => (
+        <div>
+          <p class="font-medium">{item.q}</p>
+          <p class="mt-2 text-sm" style="color: var(--color-ink-soft);">{item.a}</p>
+        </div>
+      ))}
     </div>
   </section>
 
   <section class="section py-16">
-    <a href={CALL_HREF} class="btn-accent">Book a free 30-minute call</a>
-    <a href="/services/snapshot" class="btn-ghost ml-2">Or start with the $450 Snapshot →</a>
+    <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-warm);">
+      <p class="font-display text-2xl">Ready to make something <em>that looks like you?</em></p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a href={CALL_HREF} class="btn-accent">Book a free 30-minute call</a>
+        <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
+      </div>
+    </div>
   </section>
 </BaseLayout>

@@ -24,11 +24,15 @@ const promises = [
   <section class="section py-12">
     <div class="grid gap-10 md:grid-cols-3">
       <div class="md:col-span-1">
-        <div class="aspect-square w-full rounded-2xl"
-             style="background-color: var(--color-canvas-warm); border: 1px solid var(--color-line);"></div>
+        <div class="aspect-square w-full rounded-2xl overflow-hidden"
+             style="background-color: var(--color-canvas-warm); border: 1px solid var(--color-line);">
+          <img src="/images/stuart-paul.jpg" alt="Stuart Paul" class="w-full h-full object-cover"
+               onerror="this.style.display='none'" />
+        </div>
         <div class="mt-4 font-display text-2xl font-semibold">Stuart Paul</div>
-        <div class="text-sm" style="color: var(--color-ink-soft);">Founder · CEO</div>
-        <div class="mt-1 text-sm italic" style="color: var(--color-ink-mute);">"We make the work, and the people behind it, look great."</div>
+        <div class="text-sm" style="color: var(--color-ink-soft);">Founder</div>
+        <div class="mt-3 text-sm" style="color: var(--color-ink-soft);">Stuart has long believed that good design is not a luxury, but too many individuals and small teams have been priced out of it. Nrvana Studio pairs his background in brand and AI with a straightforward mission: give anyone who does good work the visual identity to show it properly.</div>
+        <div class="mt-3 text-sm italic" style="color: var(--color-ink-mute);">"Great work deserves to look like it."</div>
       </div>
       <div class="md:col-span-2">
         <h2 class="font-display text-3xl font-semibold">Why Nrvana Studio exists</h2>
